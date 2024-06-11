@@ -1,11 +1,16 @@
-const express = require('express')
-const app = express()
-const port = 3000
+// index.js
+import express from 'express';
 
-app.get('/homepage', (req, res) => {
-  res.send('Chao ban')
-})
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  var a =6
+  var b= 6
+  var c = a+b
+  res.send('Hello World!');
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening at http://localhost:${port}`);
+});
