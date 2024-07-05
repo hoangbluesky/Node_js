@@ -1,38 +1,50 @@
 {
-  "name": "node_js",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "nodemon --inspect src/index.js",
-    "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "name": "node_js",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "nodemon --inspect src/index.js",
+        "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hoangbluesky/Node_js.git"
+    },
+    "keywords": [
+        "f8",
+        "blog",
+        "f8",
+        "nodejs",
+        "nodejs"
+    ],
+    "author": "hoang",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hoangbluesky/Node_js/issues"
+    },
+    "homepage": "https://github.com/hoangbluesky/Node_js#readme",
+    "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier package.json --write --single-quote --trailing-comma all --tab-width 4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hoangbluesky/Node_js.git"
-  },
-  "keywords": [
-    "f8",
-    "blog",
-    "f8",
-    "nodejs",
-    "nodejs"
-  ],
-  "author": "hoang",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hoangbluesky/Node_js/issues"
-  },
-  "homepage": "https://github.com/hoangbluesky/Node_js#readme",
-  "dependencies": {
-    "express": "^4.19.2",
-    "express-handlebars": "^7.1.2"
-  },
-  "devDependencies": {
-    "morgan": "^1.10.0",
-    "node-sass": "^9.0.0",
-    "nodemon": "^3.1.3"
-  }
+  "husky": {
+        "hooks": {
+          "pre-commit": "lint-staged"
+        }
+    },
+    "dependencies": {
+        "express": "^4.19.2",
+        "express-handlebars": "^7.1.2"
+    },
+    "devDependencies": {
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.7",
+        "morgan": "^1.10.0",
+        "node-sass": "^9.0.0",
+        "nodemon": "^3.1.3",
+        "prettier": "^3.3.2"
+    }
+    
 }

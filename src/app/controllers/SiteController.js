@@ -1,16 +1,13 @@
-
 class SiteController {
-
-    //home 
-    index(req,res){
-        res.render('home')
+    //home
+    index(req, res) {
+        res.render('home');
     }
 
     // search
-    search(req,res){
-        res.render('search')
+    search(req, res) {
+        res.render('search');
     }
 }
-
 
 export default new SiteController();
