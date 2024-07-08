@@ -5,12 +5,16 @@ import morgan from 'morgan';
 import { engine } from 'express-handlebars';
 
 import { route } from './routes/index.js';
+import { connect } from './config/db/index.js';
+
 // Đảm bảo sử dụng __dirname trong ES6
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-                const app = express();
-            const port = 3000;
+const app = express();
+const port = 3000;
+
+connect();
 
 // Middleware để phân tích thân yêu cầu
 app.use(
@@ -34,11 +38,11 @@ app.engine(
     }),
 );
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views')); // Sửa đường dẫn tới thư mục views
+app.set('views', path.join(__dirname, 'resources', 'views')); // Sửa đường dẫn tới thư mục views
 
 // Các route init
 route(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
 });

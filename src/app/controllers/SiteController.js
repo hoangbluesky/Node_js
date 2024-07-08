@@ -1,10 +1,21 @@
+import Course from '../models/Course.js';
+import {
+    mutipleMongooseToObject,
+    mongooseToObject,
+} from '../../util/mongoose.js';
 class SiteController {
-    //home
-    index(req, res) {
-        res.render('home');
+    // Home page
+    index(req, res, next) {
+        Course.find({})
+            .then((courses) => {
+                res.render('home', {
+                    courses: mutipleMongooseToObject(courses),
+                });
+            })
+            .catch(next);
     }
 
-    // search
+    // Search page
     search(req, res) {
         res.render('search');
     }
