@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import morgan from 'morgan';
+import methodOverride from 'method-override';
 import { engine } from 'express-handlebars';
 
 import { route } from './routes/index.js';
@@ -24,6 +25,7 @@ app.use(
 );
 app.use(express.json());
 
+app.use(methodOverride('_method'));
 // Middleware để log các yêu cầu HTTP
 app.use(morgan('combined'));
 
@@ -35,6 +37,9 @@ app.engine(
     'hbs',
     engine({
         extname: '.hbs',
+        helpers: {
+            sum: (a,b) => a+b,
+        }
     }),
 );
 app.set('view engine', 'hbs');

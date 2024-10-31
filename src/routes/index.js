@@ -1,10 +1,12 @@
 import newsRouter from './news.js';
+import meRouter from './me.js';
 import coursesRouter from './courses.js';
 import siteRouter from './site.js';
 
 export function route(app) {
     app.use('/courses', coursesRouter);
     app.use('/news', newsRouter);
+    app.use('/me', meRouter);
     app.use('/', siteRouter);
 
     //   app.post('/search', (req, res) => {

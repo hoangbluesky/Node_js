@@ -30,6 +30,29 @@ class CourseController {
                 
             })
     }
+    // get courses/edit
+
+    edit(req, res, next) {
+        Course.findById(req.params.id)
+            .then(course => res.render('courses/edit',{
+                course: mongooseToObject(course)
+            }))
+            .catch(next)
+        
+    }
+    //update
+    update(req, res, next) {
+        Course.updateOne({_id: req.params.id}, req.body)
+            .then(() => res.redirect('../me/stored/courses'))
+            .catch(next)
+    }
+
+    //delete
+    destroy(req, res, next) {
+        Course.deleteOne({_id: req.params.id}, req.body)
+            .then(() => res.redirect('back'))
+            .catch(next)
+    }
 }
 
 export default new CourseController();

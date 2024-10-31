@@ -1,17 +1,27 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">F8 Khoa Hoc</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 20px 0px;">
+  <div class="container">
+    <a class="navbar-brand" href="/home">F8 Khoa Hoc</a>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            <img
+              src="https://i.pinimg.com/736x/83/a2/73/83a273ce01680e01994c5a163d00461a.jpg"
+              alt="" class="img-avatar">
+            Ha Hoang
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/courses/create">Dăng Khóa học</a></li>
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="/me/stored/courses">Khoá Học Của Tôi</a></li>
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="/me/stored/courses">Tin Tức Của Tôi</a></li>
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="#">Đăng Xuất</a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/courses/create">Dăng Khóa học</a>
-        </li>
+      </ul>
     </div>
   </div>
 </nav>

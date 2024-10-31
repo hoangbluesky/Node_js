@@ -1,11 +1,70 @@
 @import 'variables';
 
-h1 {
-    color: $red-color;
-}
-h2 {
-    color: green;
-}
+
 .card-course-item {
     margin-top: 16px;
 }
+.bg-dark {
+    background-color: #212529 !important;
+    
+}
+.img-avatar {
+    width: 30px;
+    height: 37px;
+    border-radius: 42%;
+    margin-right: 4px;
+}
+.detail_btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Navbar adjustments */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #f8f9fa;
+    font-weight: 500;
+  }
+  
+  .navbar-nav .dropdown-menu {
+    background-color: #343a40;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-item {
+    color: #adb5bd;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #495057;
+    color: #f8f9fa;
+  }
+  
+  /* Avatar adjustments */
+  .img-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 2px solid #f8f9fa;
+  }
+  
+  /* Divider adjustments */
+  .dropdown-divider {
+    border-color: #6c757d;
+    margin: 0.5rem 0;
+  }
+  
